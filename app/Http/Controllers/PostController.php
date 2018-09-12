@@ -54,7 +54,7 @@ class PostController extends Controller
             $body = $request['body'];
             $file = $request->file('image');
             $fileName = $file->getClientOriginalName();
-            $path = 'uploads/';
+            $path = public_path().'/uploads/';
             $file = $file->move($path, $fileName);
             
             $post = new Post;
